@@ -36,6 +36,13 @@ jobs:
             name: aci-electrop
             location: 'west us'
 
+        - name: 'Azure CLI Action'
+          uses: Azure/cli@v106          
+          with:
+            azcliversion: 2.0.72
+            inlineScript: |     
+                az webapp config set --resource-group ${{ secrets.RESOURCE_GROUP }} --name MagentoApp --linux-fx-version 'DOCKER|{{ secrets.REGISTRY_LOGIN_SERVER }}/electroplanetazure:{{ github.sha }}'
+              
         - name: 'Publish Container to Webb APP'
           uses: azure/webapps-deploy@v2
           with:

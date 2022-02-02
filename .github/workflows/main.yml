@@ -37,7 +37,7 @@ jobs:
             location: 'west us'
 
         - name: 'Azure CLI Action'
-          uses: Azure/cli@v106          
+          uses: Azure/cli@v1          
           with:
             azcliversion: 2.0.72
             inlineScript: |     

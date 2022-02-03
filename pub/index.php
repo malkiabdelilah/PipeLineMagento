@@ -18,6 +18,10 @@ try {
         Autoload error</h3>
     </div>
     <p>{$e->getMessage()}</p>
+    <br/>
+    <div style="margin:0 0 25px 0; border-bottom:1px solid #ccc;">
+    <h2>Chaging for DevOps GitHub Pipeline check</h2>
+    </div>
 </div>
 HTML;
     exit(1);

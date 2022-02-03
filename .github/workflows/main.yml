@@ -46,6 +46,7 @@ jobs:
           with:
             azcliversion: 2.0.72
             inlineScript: |     
+                az account set --subscription "b3505477-06d8-4e55-8725-094f97bf4fed"
                 az webapp config set --resource-group ${{ secrets.RESOURCE_GROUP }} --name MagentoApp --linux-fx-version 'DOCKER|{{ secrets.REGISTRY_LOGIN_SERVER }}/electroplanetazure:{{ github.sha }}'
               
         - name: 'Publish Container to Webb APP'
